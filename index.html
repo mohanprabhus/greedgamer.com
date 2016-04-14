@@ -1,29 +1,25 @@
 <!DOCTYPE html>
- <html>
-  <head>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <title>Lewds.org - So Lewd!</title>
-  </head> 
-
-  <body>
-    <video autoplay id="bgvid" loop onclick="rndvid()">
-      <source src="/lewds.webm" type="video/webm">
-    </video>
-
-
-<div id="overlay">Lewds!</div>
-    <script>
-        var myVids = ['lewds.webm', 'sakuratrick3.webm'];
-        var v = document.getElementById("bgvid");
-        var s = document.getElementById("srcs");
-        function rndvid() {
-        var rand = myVids[Math.floor(Math.random() * myVids.length)];
-            s.setAttribute("src", rand);
-            v.load();
-        }
-        window.onload = rndvid();
-    </script>
-  </body>
-
+<html>
+ <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Lewds.org - So Lewd!</title>
+ </head>
+ <body>
+  <video autoplay id="bgvid" loop onclick="rndvid()">
+   <source id="srcs" src="/lewds.webm" type="video/webm" />
+  </video>
+  <div id="overlay">Lewds!</div>
+  <script>
+   var myVids = ['lewds.webm', 'sakuratrick3.webm'];
+   var v = document.getElementById("bgvid");
+   var s = document.getElementById("srcs");
+   function rndvid() {
+    var rand = myVids[Math.floor(Math.random() * myVids.length)];
+    s.setAttribute("src", rand);
+    v.load();
+   }
+   window.onload = rndvid();
+  </script>
+ </body>
 </html>
