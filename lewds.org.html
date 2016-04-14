@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Example bg video</title>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+		body {
+			margin: 0;
+			background: transparent; 
+		}
+		video { 
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			transform: translateX(-50%) translateY(-50%);
+			background: url('ifyouneed.jpg') no-repeat;
+			background-size: cover;
+			transition: 1s opacity;
+		}
+	</style>
+</head>
+<body>
+	<video autoplay id="bgvid" loop onclick="rndvid()">
+		<source id="srcs" src="bgvid.webm" type="video/webm" />
+	</video>
+	<a href="https://discuss.moe" style="font-family:'Advent Pro',sans-serif;font-size:8vw;position:relative;top:5vh;right:5vw;text-align:right;display:block;color:rgba(255,255,255,1);text-decoration:underline;">Community</a>
+	<script>
+		var myVids = ['bgvid.webm', 'MyselfYourselfOP.webm'];
+		var v = document.getElementById("bgvid");
+		var s = document.getElementById("srcs");
+		function rndvid() {
+			var rand = myVids[Math.floor(Math.random() * myVids.length)];
+			s.setAttribute("src", rand);
+			v.load();
+		}
+		window.onload = rndvid();
+	</script>
+</body>
+</html>
