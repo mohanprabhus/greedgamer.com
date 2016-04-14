@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Lewds.org - So Lewd!</title>
+    <style type="text/css"></style>
+  </head> 
+
+  <body>
+    <video autoplay id="bgvid" loop onclick="rndvid()">
+      <source src="/videos/lewds.webm" type="video/webm">
+    </video>
+
+
+<div id="overlay">Community</div>
+    <script type="text/javascript">
+        var myVids = ['bgvid.webm', 'MyselfYourselfOP.webm'];
+        var v = document.getElementById("bgvid");
+        var s = document.getElementById("srcs");
+        function rndvid() {
+        var rand = myVids[Math.floor(Math.random() * myVids.length)];
+            s.setAttribute("src", rand);
+            v.load();
+        }
+        window.onload = rndvid();
+    </script>
+  </body>
+
+</html>
