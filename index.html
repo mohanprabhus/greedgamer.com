@@ -9,8 +9,8 @@
 	</head>
 	<body>
 		<video id="video" autobuffer autoplay preload="auto">
-			<source class="mp4" src="/vids/vid1.mp4" type="video/mp4" />
 			<source class="webm" src="/vids/vid1.webm" type="video/webm" />
+			<source class="mp4" src="/vids/vid1.mp4" type="video/mp4" />
 			Your browser does not support html5 video.
 		</video>
 		<div id="polina">
@@ -21,8 +21,8 @@
 		</div>
 		<script type="text/javascript">
 			var videoPlayer = document.getElementById("video"),
-				sourcemp4 = document.getElementById("video").getElementsByClassName("mp4")[0],
 				sourcewebm = document.getElementById("video").getElementsByClassName("webm")[0],
+				sourcemp4 = document.getElementById("video").getElementsByClassName("mp4")[0],
 				videosList = ["1","2","3","4","5"],
 				current = 0;
 
