@@ -29,8 +29,8 @@ videoPlayer.addEventListener('ended', function () {
     var videosList = ["1","2","3","4","5" ],
         videoPlay = videosList[Math.floor(Math.random() * videosList.length)];
     
-     $("#mp4").attr("src",  "/vids/vid" + videoPlay + ".mp4");
-     $("#webm").attr("src", "/vids/vid" + videoPlay + ".ogg");
+     $("#mp4").attr("src",  "https://greedgamer.com/vids/vid" + videoPlay + ".mp4");
+     $("#webm").attr("src", "https://greedgamer.com/vids/vid" + videoPlay + ".ogg");
     
     this.load();
     this.play();
