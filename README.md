@@ -1,6 +1,5 @@
-# lewds.org
+# Greedgamer.com  
 
-Simple trash code for lewds.org
-Accepting PR
+Front Landing page for Greedgamer.com
 
 **MIT License**
