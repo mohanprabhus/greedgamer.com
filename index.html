@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="/style.css">
-		<title>GreedGamer - Greed is Good.</title>
-		<meta name="description" content="GreedGamer Gaming Community">
-		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
-	</head>
-	<body>
-		<video id="video" autobuffer autoplay preload="auto">
-			<source class="mp4" src="/vids/vid1.mp4" type="video/mp4" />
-			<source class="webm" src="/vids/vid1.webm" type="video/webm" />
-			Your browser does not support html5 video.
-		</video>
-		<div id="polina">
-			<h1>GreedGamer – Gaming Community</h1>
-			<p>Greed is good.</p>
-			<p>Greedgamer is a gaming community project made for gamers by the gamers. We are a friendly bunch of folks who game, Do join our Forums and be a part of our community. We are a multiplatform gaming community.</p>
-			<p><a href="https://forums.greedgamer.com">Forums</a></p>
-		</div>
-		<script type="text/javascript">
-			var videoPlayer = document.getElementById("video"),
-				sourcemp4 = document.getElementById("video").getElementsByClassName("mp4")[0],
-				sourcewebm = document.getElementById("video").getElementsByClassName("webm")[0],
-				videosList = ["1","2","3","4","5"],
-				current = 0;
+ <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <title>GreedGamer - Greed is Good.</title>
+  <meta name="description" content="GreedGamer Gaming Community">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+ </head>
+ <body>
+<video id="video" autobuffer autoplay preload="auto">
+    <source id="webm" src="/vids/vid1.webm" type="video/webm" /> <!-- Chrome -->
+    <source id="mp4"  src="/vids/vid1.mp4"  type="video/mp4" /> <!-- Safari / iOS video -->
+    Your browser does not support html5 video. Update your browser to latest or use Chrome/Firefox.
+</video>
+<div id="polina">
+<h1>GreedGamer - Gaming Community</h1>
+<p>Greed is good.
+<p>Greedgamer is a gaming community project made for gamers by the gamers. We are a friendly bunch of folks who game, Do join our Forums and be a part of our community. We are a multiplatform gaming community.</p>
+<p><a href="https://forums.greedgamer.com">Forums</a></p>
+</div>
+<script type="text/javascript">
+  var videoPlayer = document.getElementById('video');
 
-			videoPlayer.addEventListener("ended", function(){
-				current += 1;
-				if (current >= videosList.length) current = 0;
-				let source = "/vids/vid" + videosList[current];
-				sourcemp4.src = source + ".mp4";
-				sourcewebm.src = source + ".webm";
-				videoPlayer.load();
-				videoPlayer.play();
-			}, false);
-		</script>
-	</body>
+videoPlayer.addEventListener('ended', function () {
+    
+    this.pause();
+
+    var videosList = ["1","2","3","4","5" ],
+        videoPlay = videosList[Math.floor(Math.random() * videosList.length)];
+
+     $("#webm").attr("src", "https://greedgamer.com/vids/vid" + videoPlay + ".webm");    
+     $("#mp4").attr("src",  "https://greedgamer.com/vids/vid" + videoPlay + ".mp4");
+    
+    this.load();
+    this.play();
+
+}, false);
+
+ videoPlayer.play();
+
+</script>
+ </body>
 </html>
