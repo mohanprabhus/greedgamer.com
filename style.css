@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900");
-
+@import url("https://fonts.googleapis.com/css?family=Concert+One");
 body {
 	margin: 0;
-	background: #000; 
+	background: #000;
 }
-video { 
+
+video {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -18,38 +19,44 @@ video {
 	background-size: cover;
 	transition: 1s opacity;
 }
+
 .stopfade {
 	opacity: .5;
 }
-#polina { 
-	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-	font-weight: 100; 
+
+#polina {
+	font-family: Concert One, sans-serif;
 	background: rgba(0, 0, 0, 0.3);
-	color: white;
+	color: #fafafa;
 	padding: 2rem;
 	width: 33%;
 	margin: 2rem;
 	float: right;
 	font-size: 1.2rem;
 }
+
 h1 {
+	font-family: Concert One, sans-serif;
 	font-size: 3rem;
 	text-transform: uppercase;
 	margin-top: 0;
 	letter-spacing: .3rem;
 }
+
 a {
-	display: inline-block;
+	display: -webkit-inline-box;
 	color: #fff;
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.5);
 	padding: .5rem;
-	transition: .6s background; 
+	transition: .6s background;
 }
-a:hover{
+
+a:hover {
 	background: rgba(0, 0, 0, 0.9);
 }
-@media screen and (max-width: 500px) { 
+
+@media screen and (max-width: 500px) {
 	div {
 		width: 70%;
 	}
